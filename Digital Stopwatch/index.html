@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock with Controls</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <video play autoplay controls loop class="video-background">
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <div class="clock">
+      <div id="time">00:00:00</div>
+    </div>
+    <div class="controls">
+      <button id="startStop" onclick="startStop()">Start</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+    <div class="laps">
+      <button onclick="recordLap()">Lap</button>
+      <div class="lap_background">
+        Your Laps will appear here 😊
+        <br>
+       
+      <ol id="lapList"></ol>
+      </div>
+    </div>
+  </div>
+  <script src="action.js"></script>
+</body>
+</html>
